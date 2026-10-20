@@ -1,0 +1,1852 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "123",
+      "role": "admin",
+      "rooms": [
+        "Salon",
+        "Yatak Odası",
+        "Mutfak",
+        "Banyo",
+        "Balkon"
+      ]
+    },
+    {
+      "id": 2,
+      "username": "ahmet",
+      "password": "123",
+      "role": "user",
+      "rooms": [
+        "Salon",
+        "Mutfak",
+        "Yatak Odası",
+        "Banyo"
+      ]
+    },
+    {
+      "username": "melike",
+      "password": "1234567",
+      "role": "user",
+      "rooms": [
+        "Salon",
+        "Mutfak",
+        "Yatak Odası",
+        "Banyo",
+        "Bahçe",
+        "Garaj",
+        "Balkon"
+      ],
+      "id": 3
+    },
+    {
+      "username": "Bejan",
+      "password": "bejan123",
+      "role": "user",
+      "rooms": [
+        "Salon",
+        "Yatak Odası",
+        "Çalışma Odası",
+        "Mutfak",
+        "Banyo"
+      ],
+      "id": 4
+    }
+  ],
+  "devices": [
+    {
+      "id": 1,
+      "userId": 2,
+      "name": "Salon Işığı",
+      "type": "light",
+      "room": "Salon",
+      "status": true
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "name": "Klima",
+      "type": "thermostat",
+      "room": "Salon",
+      "status": false,
+      "temperature": 26
+    },
+    {
+      "userId": 1,
+      "name": "Salon Aydınlatması",
+      "type": "light",
+      "room": "Salon",
+      "status": false,
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "name": "Salon Güvenlik Kamerası",
+      "type": "camera",
+      "room": "Salon",
+      "status": false,
+      "id": 27
+    },
+    {
+      "userId": 1,
+      "name": "Salon Kliması & Termostat",
+      "type": "thermostat",
+      "room": "Salon",
+      "status": false,
+      "temperature": 23,
+      "id": 28
+    },
+    {
+      "userId": 1,
+      "name": "Robot Süpürge",
+      "type": "robot_vacuum",
+      "room": "Salon",
+      "status": false,
+      "mode": "docked",
+      "battery": 96,
+      "id": 29
+    },
+    {
+      "userId": 1,
+      "name": "Salon TV & Ses Prizi",
+      "type": "socket",
+      "room": "Salon",
+      "status": false,
+      "id": 30
+    },
+    {
+      "userId": 1,
+      "name": "Yatak Odası Lambası",
+      "type": "light",
+      "room": "Yatak Odası",
+      "status": false,
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "name": "Yatak Odası Güvenlik Kamerası",
+      "type": "camera",
+      "room": "Yatak Odası",
+      "status": false,
+      "id": 31
+    },
+    {
+      "userId": 1,
+      "name": "Yatak Odası Kliması",
+      "type": "thermostat",
+      "room": "Yatak Odası",
+      "status": false,
+      "temperature": 21,
+      "id": 32
+    },
+    {
+      "userId": 1,
+      "name": "Yatak Başı Akıllı Priz",
+      "type": "socket",
+      "room": "Yatak Odası",
+      "status": false,
+      "id": 33
+    },
+    {
+      "userId": 1,
+      "name": "Mutfak Aydınlatması",
+      "type": "light",
+      "room": "Mutfak",
+      "status": false,
+      "id": 24
+    },
+    {
+      "userId": 1,
+      "name": "Mutfak Güvenlik Kamerası",
+      "type": "camera",
+      "room": "Mutfak",
+      "status": false,
+      "id": 34
+    },
+    {
+      "userId": 1,
+      "name": "Mutfak Termostatı",
+      "type": "thermostat",
+      "room": "Mutfak",
+      "status": true,
+      "temperature": 22,
+      "id": 35
+    },
+    {
+      "userId": 1,
+      "name": "Akıllı Çamaşır Makinesi",
+      "type": "washing_machine",
+      "room": "Mutfak",
+      "status": false,
+      "program": "Pamuklu",
+      "programState": "running",
+      "id": 36
+    },
+    {
+      "userId": 1,
+      "name": "Mutfak Akıllı Priz",
+      "type": "socket",
+      "room": "Mutfak",
+      "status": true,
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "name": "Banyo Tavan Lambası",
+      "type": "light",
+      "room": "Banyo",
+      "status": false,
+      "id": 25
+    },
+    {
+      "userId": 1,
+      "name": "Banyo & Koridor Güvenlik Kamerası",
+      "type": "camera",
+      "room": "Banyo",
+      "status": true,
+      "id": 37
+    },
+    {
+      "userId": 1,
+      "name": "Banyo Havlupan Termostatı",
+      "type": "thermostat",
+      "room": "Banyo",
+      "status": true,
+      "temperature": 26,
+      "id": 38
+    },
+    {
+      "userId": 1,
+      "name": "Banyo Akıllı Priz",
+      "type": "socket",
+      "room": "Banyo",
+      "status": false,
+      "id": 39
+    },
+    {
+      "userId": 1,
+      "name": "Balkon Ambiyans Işığı",
+      "type": "light",
+      "room": "Balkon",
+      "status": false,
+      "id": 26
+    },
+    {
+      "userId": 1,
+      "name": "Balkon Güvenlik Kamerası",
+      "type": "camera",
+      "room": "Balkon",
+      "status": false,
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "name": "Balkon Isıtıcı Termostatı",
+      "type": "thermostat",
+      "room": "Balkon",
+      "status": false,
+      "temperature": 23,
+      "id": 40
+    },
+    {
+      "userId": 1,
+      "name": "Balkon Akıllı Priz",
+      "type": "socket",
+      "room": "Balkon",
+      "status": false,
+      "id": 41
+    },
+    {
+      "userId": 1,
+      "name": "Otomatik Cam Balkon",
+      "type": "glass_balcony",
+      "room": "Balkon",
+      "status": false,
+      "position": 0,
+      "id": 42
+    },
+    {
+      "userId": 2,
+      "name": "mutfak kamer",
+      "type": "camera",
+      "room": "Mutfak",
+      "status": false,
+      "id": 7
+    },
+    {
+      "userId": 2,
+      "name": "SSS",
+      "type": "light",
+      "room": "Mutfak",
+      "status": false,
+      "id": 8
+    },
+    {
+      "userId": 2,
+      "name": "KLİMA",
+      "type": "light",
+      "room": "Yatak Odası",
+      "status": true,
+      "id": 9
+    },
+    {
+      "userId": 2,
+      "name": "YATak odası",
+      "type": "thermostat",
+      "room": "Yatak Odası",
+      "status": true,
+      "temperature": 29,
+      "id": 10
+    },
+    {
+      "userId": 2,
+      "name": "Salon priz",
+      "type": "socket",
+      "room": "Salon",
+      "status": false,
+      "id": 11
+    },
+    {
+      "userId": 3,
+      "name": "Salon lambası",
+      "type": "light",
+      "room": "Salon",
+      "status": true,
+      "id": 12
+    },
+    {
+      "userId": 3,
+      "name": "Klima",
+      "type": "thermostat",
+      "room": "Salon",
+      "status": false,
+      "temperature": 29,
+      "id": 13
+    },
+    {
+      "userId": 3,
+      "name": "Kamera",
+      "type": "camera",
+      "room": "Salon",
+      "status": true,
+      "id": 14
+    },
+    {
+      "userId": 3,
+      "name": "Lamba",
+      "type": "light",
+      "room": "Yatak Odası",
+      "status": false,
+      "id": 15
+    },
+    {
+      "userId": 4,
+      "name": "Mutfak lambası",
+      "type": "light",
+      "room": "Mutfak",
+      "status": true,
+      "id": 16
+    },
+    {
+      "userId": 2,
+      "name": "SDD",
+      "type": "light",
+      "room": "Banyo",
+      "status": false,
+      "id": 17
+    },
+    {
+      "userId": 2,
+      "name": "EE",
+      "type": "thermostat",
+      "room": "Banyo",
+      "status": false,
+      "temperature": 22,
+      "id": 18
+    },
+    {
+      "userId": 2,
+      "name": "EEE",
+      "type": "camera",
+      "room": "Banyo",
+      "status": false,
+      "id": 19
+    },
+    {
+      "userId": 2,
+      "name": "EEEE",
+      "type": "lock",
+      "room": "Banyo",
+      "status": false,
+      "id": 20
+    },
+    {
+      "userId": 2,
+      "name": "EWKSJED",
+      "type": "socket",
+      "room": "Banyo",
+      "status": false,
+      "id": 21
+    },
+    {
+      "id": 22,
+      "userId": 2,
+      "name": "Akıllı Çamaşır Makinesi",
+      "type": "washing_machine",
+      "room": "Mutfak",
+      "status": false,
+      "program": "Eco",
+      "programState": "paused"
+    },
+    {
+      "id": 23,
+      "userId": 2,
+      "name": "Robot Süpürge",
+      "type": "robot_vacuum",
+      "room": "Mutfak",
+      "status": false,
+      "mode": "paused",
+      "battery": 95
+    }
+  ],
+  "rules": [
+    {
+      "id": 1,
+      "userId": 2,
+      "deviceId": 1,
+      "condition": "19:00",
+      "action": "turn_on"
+    },
+    {
+      "userId": 1,
+      "deviceId": 3,
+      "condition": "23:00",
+      "action": "turn_off",
+      "id": 2
+    },
+    {
+      "userId": 3,
+      "deviceId": 13,
+      "condition": "19:00",
+      "action": "turn_on",
+      "id": 3
+    },
+    {
+      "userId": 4,
+      "deviceId": 16,
+      "condition": "19:00",
+      "action": "turn_on",
+      "id": 4
+    },
+    {
+      "userId": 4,
+      "deviceId": 16,
+      "condition": "21:00",
+      "action": "turn_on",
+      "id": 5
+    },
+    {
+      "userId": 2,
+      "deviceId": 1,
+      "condition": "00:14",
+      "action": "turn_on",
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "deviceId": 3,
+      "condition": "13:36",
+      "action": "turn_on",
+      "id": 7
+    }
+  ],
+  "notifications": [
+    {
+      "id": 1,
+      "userId": 2,
+      "message": "Salon Işığı açıldı.",
+      "isRead": false,
+      "timestamp": "2023-10-25T18:00:00Z"
+    },
+    {
+      "userId": 1,
+      "message": "Sistem başarıyla başlatıldı ve oda planı yüklendi.",
+      "timestamp": "2026-10-13T10:35:00.000Z",
+      "isRead": true,
+      "id": 2
+    },
+    {
+      "userId": 2,
+      "message": "ahmet sisteme başarılı bir şekilde giriş yaptı.",
+      "timestamp": "2026-10-13T10:46:23.172Z",
+      "isRead": true,
+      "id": 3
+    },
+    {
+      "userId": 2,
+      "message": "Yeni cihaz eklendi: mutfak kamer (Mutfak)",
+      "timestamp": "2026-10-13T10:46:46.477Z",
+      "isRead": true,
+      "id": 4
+    },
+    {
+      "userId": 2,
+      "message": "mutfak kamer [Mutfak] cihazı açıldı.",
+      "timestamp": "2026-10-13T10:46:48.711Z",
+      "isRead": true,
+      "id": 5
+    },
+    {
+      "userId": 2,
+      "message": "mutfak kamer [Mutfak] cihazı kapatıldı.",
+      "timestamp": "2026-10-13T10:46:49.665Z",
+      "isRead": true,
+      "id": 6
+    },
+    {
+      "userId": 2,
+      "message": "mutfak kamer [Mutfak] cihazı açıldı.",
+      "timestamp": "2026-10-13T10:46:50.535Z",
+      "isRead": true,
+      "id": 7
+    },
+    {
+      "userId": 2,
+      "message": "Salon Işığı [Salon] cihazı açıldı.",
+      "timestamp": "2026-10-13T10:46:52.350Z",
+      "isRead": true,
+      "id": 8
+    },
+    {
+      "userId": 2,
+      "message": "Yeni cihaz eklendi: SSS (Mutfak)",
+      "timestamp": "2026-10-13T10:47:56.533Z",
+      "isRead": true,
+      "id": 9
+    },
+    {
+      "userId": 2,
+      "message": "SSS [Mutfak] cihazı açıldı.",
+      "timestamp": "2026-10-13T10:48:06.179Z",
+      "isRead": true,
+      "id": 10
+    },
+    {
+      "userId": 2,
+      "message": "Yeni cihaz eklendi: KLİMA (Yatak Odası)",
+      "timestamp": "2026-10-13T10:48:14.405Z",
+      "isRead": true,
+      "id": 11
+    },
+    {
+      "userId": 2,
+      "message": "Yeni cihaz eklendi: YATak odası (Yatak Odası)",
+      "timestamp": "2026-10-13T10:48:45.745Z",
+      "isRead": true,
+      "id": 12
+    },
+    {
+      "userId": 2,
+      "message": "YATak odası [Yatak Odası] cihazı açıldı.",
+      "timestamp": "2026-10-13T10:48:47.727Z",
+      "isRead": true,
+      "id": 13
+    },
+    {
+      "userId": 2,
+      "message": "KLİMA [Yatak Odası] cihazı açıldı.",
+      "timestamp": "2026-10-13T10:48:48.950Z",
+      "isRead": true,
+      "id": 14
+    },
+    {
+      "userId": 2,
+      "message": "ahmet sisteme başarılı bir şekilde giriş yaptı.",
+      "timestamp": "2026-10-13T10:54:21.311Z",
+      "isRead": true,
+      "id": 15
+    },
+    {
+      "userId": 2,
+      "message": "Yeni cihaz eklendi: Salon priz (Salon)",
+      "timestamp": "2026-10-13T10:54:49.423Z",
+      "isRead": true,
+      "id": 16
+    },
+    {
+      "userId": 2,
+      "message": "ahmet sistemden çıkış yaptı.",
+      "timestamp": "2026-10-13T11:03:34.389Z",
+      "isRead": true,
+      "id": 17
+    },
+    {
+      "userId": 1,
+      "message": "admin sisteme başarılı bir şekilde giriş yaptı.",
+      "timestamp": "2026-10-13T11:03:36.841Z",
+      "isRead": false,
+      "id": 18
+    },
+    {
+      "userId": 3,
+      "message": "Yeni kullanıcı hesabı oluşturuldu: melike",
+      "timestamp": "2026-10-13T11:03:57.013Z",
+      "isRead": false,
+      "id": 19
+    },
+    {
+      "userId": 3,
+      "message": "Yeni cihaz eklendi: Salon lambası  (Salon)",
+      "timestamp": "2026-10-13T11:04:31.218Z",
+      "isRead": false,
+      "id": 20
+    },
+    {
+      "userId": 3,
+      "message": "Salon lambası [Salon] cihazı açıldı.",
+      "timestamp": "2026-10-13T11:04:36.063Z",
+      "isRead": false,
+      "id": 21
+    },
+    {
+      "userId": 3,
+      "message": "Yeni cihaz eklendi: Klima (Salon)",
+      "timestamp": "2026-10-13T11:04:47.145Z",
+      "isRead": false,
+      "id": 22
+    },
+    {
+      "userId": 3,
+      "message": "Klima [Salon] cihazı açıldı.",
+      "timestamp": "2026-10-13T11:04:49.976Z",
+      "isRead": false,
+      "id": 23
+    },
+    {
+      "userId": 3,
+      "message": "Klima cihazı [Salon] güncellendi.",
+      "timestamp": "2026-10-13T11:05:14.955Z",
+      "isRead": false,
+      "id": 24
+    },
+    {
+      "userId": 3,
+      "message": "Klima sıcaklığı 31°C yapıldı.",
+      "timestamp": "2026-10-13T11:05:17.704Z",
+      "isRead": false,
+      "id": 25
+    },
+    {
+      "userId": 3,
+      "message": "Klima sıcaklığı 30°C yapıldı.",
+      "timestamp": "2026-10-13T11:05:18.222Z",
+      "isRead": false,
+      "id": 26
+    },
+    {
+      "userId": 3,
+      "message": "Klima sıcaklığı 29°C yapıldı.",
+      "timestamp": "2026-10-13T11:05:18.804Z",
+      "isRead": false,
+      "id": 27
+    },
+    {
+      "userId": 3,
+      "message": "Yeni otomasyon kuralı eklendi: Saat 19:00 -> Klima (turn_on)",
+      "timestamp": "2026-10-13T11:05:55.506Z",
+      "isRead": false,
+      "id": 28
+    },
+    {
+      "userId": 3,
+      "message": "Otomasyon kuralı tetiklendi: Klima -> AÇILDI",
+      "timestamp": "2026-10-13T11:06:03.940Z",
+      "isRead": false,
+      "id": 29
+    },
+    {
+      "userId": 3,
+      "message": "Otomasyon kuralı tetiklendi: Klima -> AÇILDI",
+      "timestamp": "2026-10-13T11:06:15.473Z",
+      "isRead": false,
+      "id": 30
+    },
+    {
+      "userId": 3,
+      "message": "Yeni cihaz eklendi: Kamera (Salon)",
+      "timestamp": "2026-10-13T11:06:44.675Z",
+      "isRead": false,
+      "id": 31
+    },
+    {
+      "userId": 3,
+      "message": "Kamera [Salon] cihazı açıldı.",
+      "timestamp": "2026-10-13T11:06:49.178Z",
+      "isRead": false,
+      "id": 32
+    },
+    {
+      "userId": 3,
+      "message": "Kamera [Salon] cihazı kapatıldı.",
+      "timestamp": "2026-10-13T11:06:50.082Z",
+      "isRead": false,
+      "id": 33
+    },
+    {
+      "userId": 3,
+      "message": "Klima [Salon] cihazı kapatıldı.",
+      "timestamp": "2026-10-13T11:06:50.766Z",
+      "isRead": false,
+      "id": 34
+    },
+    {
+      "userId": 3,
+      "message": "Klima [Salon] cihazı açıldı.",
+      "timestamp": "2026-10-13T11:06:52.269Z",
+      "isRead": false,
+      "id": 35
+    },
+    {
+      "userId": 3,
+      "message": "Klima [Salon] cihazı kapatıldı.",
+      "timestamp": "2026-10-13T11:06:52.936Z",
+      "isRead": false,
+      "id": 36
+    },
+    {
+      "userId": 3,
+      "message": "Yeni cihaz eklendi: Lamba (Yatak Odası)",
+      "timestamp": "2026-10-13T11:07:06.059Z",
+      "isRead": false,
+      "id": 37
+    },
+    {
+      "userId": 3,
+      "message": "Kamera [Salon] cihazı açıldı.",
+      "timestamp": "2026-10-13T11:07:17.498Z",
+      "isRead": false,
+      "id": 38
+    },
+    {
+      "userId": 4,
+      "message": "Yeni kullanıcı hesabı oluşturuldu: Bejan",
+      "timestamp": "2026-10-13T11:09:02.053Z",
+      "isRead": true,
+      "id": 39
+    },
+    {
+      "userId": 4,
+      "message": "Yeni cihaz eklendi: Mutfak lambası  (Mutfak)",
+      "timestamp": "2026-10-13T11:09:23.974Z",
+      "isRead": false,
+      "id": 40
+    },
+    {
+      "userId": 4,
+      "message": "Mutfak lambası [Mutfak] cihazı açıldı.",
+      "timestamp": "2026-10-13T11:09:27.056Z",
+      "isRead": true,
+      "id": 41
+    },
+    {
+      "userId": 4,
+      "message": "Mutfak lambası [Mutfak] cihazı kapatıldı.",
+      "timestamp": "2026-10-13T11:09:29.562Z",
+      "isRead": true,
+      "id": 42
+    },
+    {
+      "userId": 4,
+      "message": "Mutfak lambası [Mutfak] cihazı açıldı.",
+      "timestamp": "2026-10-13T11:09:30.899Z",
+      "isRead": true,
+      "id": 43
+    },
+    {
+      "userId": 4,
+      "message": "Yeni otomasyon kuralı eklendi: Saat 19:00 -> Mutfak lambası (turn_on)",
+      "timestamp": "2026-10-13T11:09:47.200Z",
+      "isRead": true,
+      "id": 44
+    },
+    {
+      "userId": 4,
+      "message": "Yeni otomasyon kuralı eklendi: Saat 21:00 -> Mutfak lambası (turn_on)",
+      "timestamp": "2026-10-13T11:09:55.990Z",
+      "isRead": true,
+      "id": 45
+    },
+    {
+      "userId": 1,
+      "message": "Mutfak Akıllı Priz [Mutfak] cihazı açıldı.",
+      "timestamp": "2026-10-13T11:11:01.645Z",
+      "isRead": false,
+      "id": 46
+    },
+    {
+      "userId": 2,
+      "message": "Otomasyon kuralı çalıştı: Salon Işığı (Salon) Saat 19:00 kuralıyla AÇILDI.",
+      "timestamp": "2026-10-13T12:47:15.095Z",
+      "isRead": true,
+      "id": 47
+    },
+    {
+      "userId": 2,
+      "message": "Otomasyon kuralı çalıştı: Salon Işığı (Salon) Manuel olarak KAPATILDI.",
+      "timestamp": "2026-10-13T12:47:15.732Z",
+      "isRead": true,
+      "id": 48
+    },
+    {
+      "userId": 2,
+      "message": "Otomasyon hatası: Saat 19:00 kuralı hedef cihazı (#99999) bulamadı.",
+      "timestamp": "2026-10-13T12:47:16.071Z",
+      "isRead": true,
+      "id": 49
+    },
+    {
+      "userId": 2,
+      "message": "Otomasyon hatası: Saat 19:00 kuralı hedef cihazı (#999999) bulamadı veya yetkisiz erişim.",
+      "timestamp": "2026-10-13T12:59:32.831Z",
+      "isRead": true,
+      "id": 50
+    },
+    {
+      "userId": 2,
+      "message": "Otomasyon hatası: Saat 19:00 kuralı hedef cihazı (#5) bulamadı veya yetkisiz erişim.",
+      "timestamp": "2026-10-13T12:59:32.857Z",
+      "isRead": true,
+      "id": 51
+    },
+    {
+      "userId": 2,
+      "message": "ahmet sisteme başarılı bir şekilde giriş yaptı.",
+      "timestamp": "2026-10-13T13:02:54.816Z",
+      "isRead": true,
+      "id": 52
+    },
+    {
+      "userId": 2,
+      "message": "Salon Işığı [Salon] cihazı açıldı.",
+      "timestamp": "2026-10-13T13:03:13.657Z",
+      "isRead": true,
+      "id": 53
+    },
+    {
+      "userId": 2,
+      "message": "Klima sıcaklığı 25°C yapıldı.",
+      "timestamp": "2026-10-13T13:03:21.221Z",
+      "isRead": true,
+      "id": 54
+    },
+    {
+      "userId": 2,
+      "message": "Klima sıcaklığı 26°C yapıldı.",
+      "timestamp": "2026-10-13T13:03:21.530Z",
+      "isRead": true,
+      "id": 55
+    },
+    {
+      "userId": 2,
+      "message": "Salon priz [Salon] cihazı açıldı.",
+      "timestamp": "2026-10-13T13:03:22.976Z",
+      "isRead": true,
+      "id": 56
+    },
+    {
+      "userId": 2,
+      "message": "Salon priz [Salon] cihazı kapatıldı.",
+      "timestamp": "2026-10-13T13:03:24.175Z",
+      "isRead": true,
+      "id": 57
+    },
+    {
+      "userId": 2,
+      "message": "Salon priz [Salon] cihazı açıldı.",
+      "timestamp": "2026-10-13T13:03:27.665Z",
+      "isRead": true,
+      "id": 58
+    },
+    {
+      "userId": 2,
+      "message": "Salon Işığı [Salon] cihazı kapatıldı.",
+      "timestamp": "2026-10-13T13:03:30.888Z",
+      "isRead": true,
+      "id": 59
+    },
+    {
+      "userId": 2,
+      "message": "Salon Işığı [Salon] cihazı açıldı.",
+      "timestamp": "2026-10-13T13:03:33.464Z",
+      "isRead": true,
+      "id": 60
+    },
+    {
+      "userId": 2,
+      "message": "Salon Işığı [Salon] cihazı kapatıldı.",
+      "timestamp": "2026-10-13T13:03:34.383Z",
+      "isRead": true,
+      "id": 61
+    },
+    {
+      "userId": 2,
+      "message": "mutfak kamer [Mutfak] cihazı kapatıldı.",
+      "timestamp": "2026-10-13T13:03:46.728Z",
+      "isRead": true,
+      "id": 62
+    },
+    {
+      "userId": 2,
+      "message": "mutfak kamer [Mutfak] cihazı açıldı.",
+      "timestamp": "2026-10-13T13:03:47.988Z",
+      "isRead": true,
+      "id": 63
+    },
+    {
+      "userId": 2,
+      "message": "mutfak kamer [Mutfak] cihazı kapatıldı.",
+      "timestamp": "2026-10-13T13:03:48.924Z",
+      "isRead": true,
+      "id": 64
+    },
+    {
+      "userId": 2,
+      "message": "SSS [Mutfak] cihazı kapatıldı.",
+      "timestamp": "2026-10-13T13:03:49.992Z",
+      "isRead": true,
+      "id": 65
+    },
+    {
+      "userId": 2,
+      "message": "YATak odası [Yatak Odası] cihazı kapatıldı.",
+      "timestamp": "2026-10-13T13:03:59.983Z",
+      "isRead": true,
+      "id": 66
+    },
+    {
+      "userId": 2,
+      "message": "YATak odası [Yatak Odası] cihazı açıldı.",
+      "timestamp": "2026-10-13T13:04:01.182Z",
+      "isRead": true,
+      "id": 67
+    },
+    {
+      "userId": 2,
+      "message": "YATak odası [Yatak Odası] cihazı kapatıldı.",
+      "timestamp": "2026-10-13T13:04:02.411Z",
+      "isRead": true,
+      "id": 68
+    },
+    {
+      "userId": 2,
+      "message": "YATak odası [Yatak Odası] cihazı açıldı.",
+      "timestamp": "2026-10-13T13:04:03.029Z",
+      "isRead": true,
+      "id": 69
+    },
+    {
+      "userId": 2,
+      "message": "YATak odası sıcaklığı 23°C yapıldı.",
+      "timestamp": "2026-10-13T13:04:04.349Z",
+      "isRead": true,
+      "id": 70
+    },
+    {
+      "userId": 2,
+      "message": "YATak odası sıcaklığı 24°C yapıldı.",
+      "timestamp": "2026-10-13T13:04:04.551Z",
+      "isRead": true,
+      "id": 71
+    },
+    {
+      "userId": 2,
+      "message": "YATak odası sıcaklığı 25°C yapıldı.",
+      "timestamp": "2026-10-13T13:04:04.751Z",
+      "isRead": true,
+      "id": 72
+    },
+    {
+      "userId": 2,
+      "message": "YATak odası sıcaklığı 26°C yapıldı.",
+      "timestamp": "2026-10-13T13:04:04.962Z",
+      "isRead": true,
+      "id": 73
+    },
+    {
+      "userId": 2,
+      "message": "YATak odası sıcaklığı 27°C yapıldı.",
+      "timestamp": "2026-10-13T13:04:05.181Z",
+      "isRead": true,
+      "id": 74
+    },
+    {
+      "userId": 2,
+      "message": "YATak odası sıcaklığı 28°C yapıldı.",
+      "timestamp": "2026-10-13T13:04:05.374Z",
+      "isRead": true,
+      "id": 75
+    },
+    {
+      "userId": 2,
+      "message": "YATak odası sıcaklığı 29°C yapıldı.",
+      "timestamp": "2026-10-13T13:04:05.623Z",
+      "isRead": true,
+      "id": 76
+    },
+    {
+      "userId": 2,
+      "message": "Yeni cihaz eklendi: SDD (Banyo)",
+      "timestamp": "2026-10-13T13:04:51.691Z",
+      "isRead": true,
+      "id": 77
+    },
+    {
+      "userId": 2,
+      "message": "Yeni cihaz eklendi: EE (Banyo)",
+      "timestamp": "2026-10-13T13:04:57.393Z",
+      "isRead": true,
+      "id": 78
+    },
+    {
+      "userId": 2,
+      "message": "Yeni cihaz eklendi: EEE (Banyo)",
+      "timestamp": "2026-10-13T13:05:03.249Z",
+      "isRead": true,
+      "id": 79
+    },
+    {
+      "userId": 2,
+      "message": "Yeni cihaz eklendi: EEEE (Banyo)",
+      "timestamp": "2026-10-13T13:05:10.011Z",
+      "isRead": true,
+      "id": 80
+    },
+    {
+      "userId": 2,
+      "message": "Yeni cihaz eklendi: EWKSJED (Banyo)",
+      "timestamp": "2026-10-13T13:05:17.479Z",
+      "isRead": true,
+      "id": 81
+    },
+    {
+      "userId": 2,
+      "message": "EEEE [Banyo] cihazı açıldı.",
+      "timestamp": "2026-10-13T13:05:23.065Z",
+      "isRead": true,
+      "id": 82
+    },
+    {
+      "userId": 2,
+      "message": "EEE [Banyo] cihazı açıldı.",
+      "timestamp": "2026-10-13T13:05:26.918Z",
+      "isRead": false,
+      "id": 83
+    },
+    {
+      "userId": 2,
+      "message": "EE [Banyo] cihazı açıldı.",
+      "timestamp": "2026-10-13T13:05:28.239Z",
+      "isRead": true,
+      "id": 84
+    },
+    {
+      "userId": 2,
+      "message": "EWKSJED [Banyo] cihazı açıldı.",
+      "timestamp": "2026-10-13T13:05:30.312Z",
+      "isRead": false,
+      "id": 85
+    },
+    {
+      "userId": 2,
+      "message": "SDD [Banyo] cihazı açıldı.",
+      "timestamp": "2026-10-13T13:05:31.379Z",
+      "isRead": false,
+      "id": 86
+    },
+    {
+      "userId": 2,
+      "message": "KLİMA [Yatak Odası] cihazı açıldı.",
+      "timestamp": "2026-10-13T13:05:39.869Z",
+      "isRead": true,
+      "id": 87
+    },
+    {
+      "userId": 2,
+      "message": "SSS [Mutfak] cihazı açıldı.",
+      "timestamp": "2026-10-13T13:05:41.072Z",
+      "isRead": true,
+      "id": 88
+    },
+    {
+      "userId": 2,
+      "message": "Salon Işığı [Salon] cihazı açıldı.",
+      "timestamp": "2026-10-13T13:05:42.766Z",
+      "isRead": true,
+      "id": 89
+    },
+    {
+      "userId": 2,
+      "message": "Otomasyon hatası: Saat 19:00 kuralı hedef cihazı (#999999) bulamadı veya yetkisiz erişim.",
+      "timestamp": "2026-10-13T13:16:14.650Z",
+      "isRead": true,
+      "id": 90
+    },
+    {
+      "userId": 2,
+      "message": "Otomasyon hatası: Saat 19:00 kuralı hedef cihazı (#5) bulamadı veya yetkisiz erişim.",
+      "timestamp": "2026-10-13T13:16:14.666Z",
+      "isRead": true,
+      "id": 91
+    },
+    {
+      "userId": 2,
+      "message": "Phase 4 Test: Salon Işığı durumu test edildi.",
+      "timestamp": "2026-10-13T13:17:32.617Z",
+      "isRead": true,
+      "id": 92
+    },
+    {
+      "userId": 2,
+      "message": "Phase 4 Test: Salon Işığı durumu test edildi.",
+      "timestamp": "2026-10-13T13:19:11.426Z",
+      "isRead": true,
+      "id": 93
+    },
+    {
+      "userId": 2,
+      "message": "Otomasyon hatası: Saat 19:00 kuralı hedef cihazı (#999999) bulamadı veya yetkisiz erişim.",
+      "timestamp": "2026-10-13T13:19:21.385Z",
+      "isRead": true,
+      "id": 94
+    },
+    {
+      "userId": 2,
+      "message": "Otomasyon hatası: Saat 19:00 kuralı hedef cihazı (#5) bulamadı veya yetkisiz erişim.",
+      "timestamp": "2026-10-13T13:19:21.430Z",
+      "isRead": true,
+      "id": 95
+    },
+    {
+      "userId": 2,
+      "message": "mutfak kamer [Mutfak] cihazı kapatıldı.",
+      "timestamp": "2026-10-13T13:27:27.647Z",
+      "isRead": true,
+      "id": 96
+    },
+    {
+      "userId": 2,
+      "message": "SSS [Mutfak] cihazı kapatıldı.",
+      "timestamp": "2026-10-13T13:27:28.675Z",
+      "isRead": true,
+      "id": 97
+    },
+    {
+      "userId": 2,
+      "message": "EE [Banyo] cihazı kapatıldı.",
+      "timestamp": "2026-10-13T13:27:36.507Z",
+      "isRead": true,
+      "id": 98
+    },
+    {
+      "userId": 2,
+      "message": "EWKSJED [Banyo] cihazı kapatıldı.",
+      "timestamp": "2026-10-13T13:27:39.061Z",
+      "isRead": true,
+      "id": 99
+    },
+    {
+      "userId": 2,
+      "message": "EEE [Banyo] cihazı kapatıldı.",
+      "timestamp": "2026-10-13T13:27:40.173Z",
+      "isRead": true,
+      "id": 100
+    },
+    {
+      "userId": 2,
+      "message": "EEEE [Banyo] cihazı kapatıldı.",
+      "timestamp": "2026-10-13T13:27:41.724Z",
+      "isRead": true,
+      "id": 101
+    },
+    {
+      "userId": 2,
+      "message": "SDD [Banyo] cihazı kapatıldı.",
+      "timestamp": "2026-10-13T13:27:43.544Z",
+      "isRead": true,
+      "id": 102
+    },
+    {
+      "userId": 2,
+      "message": "EWKSJED [Banyo] cihazı açıldı.",
+      "timestamp": "2026-10-13T13:27:46.494Z",
+      "isRead": true,
+      "id": 103
+    },
+    {
+      "userId": 2,
+      "message": "EWKSJED [Banyo] cihazı kapatıldı.",
+      "timestamp": "2026-10-13T13:27:47.430Z",
+      "isRead": true,
+      "id": 104
+    },
+    {
+      "userId": 2,
+      "message": "EWKSJED [Banyo] cihazı açıldı.",
+      "timestamp": "2026-10-13T13:27:48.157Z",
+      "isRead": false,
+      "id": 105
+    },
+    {
+      "userId": 2,
+      "message": "EWKSJED [Banyo] cihazı kapatıldı.",
+      "timestamp": "2026-10-13T13:27:48.828Z",
+      "isRead": false,
+      "id": 106
+    },
+    {
+      "userId": 2,
+      "message": "Salon Işığı [Salon] cihazı kapatıldı.",
+      "timestamp": "2026-10-13T13:28:50.667Z",
+      "isRead": true,
+      "id": 107
+    },
+    {
+      "userId": 2,
+      "message": "Klima [Salon] cihazı kapatıldı.",
+      "timestamp": "2026-10-13T13:28:52.374Z",
+      "isRead": true,
+      "id": 108
+    },
+    {
+      "userId": 2,
+      "message": "Salon priz [Salon] cihazı kapatıldı.",
+      "timestamp": "2026-10-13T13:29:10.732Z",
+      "isRead": true,
+      "id": 109
+    },
+    {
+      "userId": 2,
+      "message": "Yeni otomasyon kuralı eklendi: Saat 00:14 -> Salon Işığı (turn_on)",
+      "timestamp": "2026-10-13T13:29:30.497Z",
+      "isRead": true,
+      "id": 110
+    },
+    {
+      "userId": 2,
+      "message": "Otomasyon kuralı çalıştı: Salon Işığı (Salon) Manuel olarak AÇILDI.",
+      "timestamp": "2026-10-13T13:29:32.963Z",
+      "isRead": true,
+      "id": 111
+    },
+    {
+      "userId": 2,
+      "message": "Otomasyon kuralı çalıştı: Salon Işığı (Salon) Manuel olarak AÇILDI.",
+      "timestamp": "2026-10-13T13:29:33.786Z",
+      "isRead": true,
+      "id": 112
+    },
+    {
+      "userId": 2,
+      "message": "Mutfak Donanımı: Akıllı Çamaşır Makinesi - Eco programı hazır",
+      "timestamp": "2026-10-13T13:42:31.210Z",
+      "id": 113,
+      "isRead": true
+    },
+    {
+      "userId": 2,
+      "message": "Phase 4 Test: Salon Işığı durumu test edildi.",
+      "timestamp": "2026-10-13T13:42:35.309Z",
+      "isRead": true,
+      "id": 114
+    },
+    {
+      "userId": 2,
+      "message": "Otomasyon hatası: Saat 19:00 kuralı hedef cihazı (#999999) bulamadı veya yetkisiz erişim.",
+      "timestamp": "2026-10-13T13:42:41.176Z",
+      "isRead": true,
+      "id": 115
+    },
+    {
+      "userId": 2,
+      "message": "Otomasyon hatası: Saat 19:00 kuralı hedef cihazı (#5) bulamadı veya yetkisiz erişim.",
+      "timestamp": "2026-10-13T13:42:41.197Z",
+      "isRead": true,
+      "id": 116
+    },
+    {
+      "userId": 2,
+      "message": "Robot Süpürge [Mutfak] cihazı açıldı.",
+      "timestamp": "2026-10-13T13:44:00.695Z",
+      "isRead": true,
+      "id": 117
+    },
+    {
+      "userId": 2,
+      "message": "EWKSJED [Banyo] cihazı açıldı.",
+      "timestamp": "2026-10-13T13:44:16.674Z",
+      "isRead": true,
+      "id": 118
+    },
+    {
+      "userId": 2,
+      "message": "EWKSJED [Banyo] cihazı kapatıldı.",
+      "timestamp": "2026-10-13T13:44:17.554Z",
+      "isRead": true,
+      "id": 119
+    },
+    {
+      "userId": 2,
+      "message": "Akıllı Çamaşır Makinesi [Mutfak] - Program seçildi: Hızlı",
+      "timestamp": "2026-10-13T13:44:36.391Z",
+      "isRead": true,
+      "id": 120
+    },
+    {
+      "userId": 2,
+      "message": "Akıllı Çamaşır Makinesi [Mutfak] - Program seçildi: Eco",
+      "timestamp": "2026-10-13T13:44:41.144Z",
+      "isRead": true,
+      "id": 121
+    },
+    {
+      "userId": 2,
+      "message": "Akıllı Çamaşır Makinesi [Mutfak] - Program seçildi: Pamuklu",
+      "timestamp": "2026-10-13T13:44:47.773Z",
+      "isRead": true,
+      "id": 122
+    },
+    {
+      "userId": 2,
+      "message": "Akıllı Çamaşır Makinesi [Mutfak] cihazı açıldı.",
+      "timestamp": "2026-10-13T13:44:50.364Z",
+      "isRead": true,
+      "id": 123
+    },
+    {
+      "userId": 2,
+      "message": "Akıllı Çamaşır Makinesi [Mutfak] cihazı kapatıldı.",
+      "timestamp": "2026-10-13T13:44:59.067Z",
+      "isRead": true,
+      "id": 124
+    },
+    {
+      "userId": 2,
+      "message": "Akıllı Çamaşır Makinesi [Mutfak] - Pamuklu programı başlatıldı",
+      "timestamp": "2026-10-13T13:45:00.158Z",
+      "isRead": true,
+      "id": 125
+    },
+    {
+      "userId": 2,
+      "message": "Robot Süpürge [Mutfak] cihazı kapatıldı.",
+      "timestamp": "2026-10-13T13:45:03.160Z",
+      "isRead": true,
+      "id": 126
+    },
+    {
+      "userId": 2,
+      "message": "Robot Süpürge [Mutfak] - Robot süpürge temizliği başlattı",
+      "timestamp": "2026-10-13T13:45:04.840Z",
+      "isRead": true,
+      "id": 127
+    },
+    {
+      "userId": 2,
+      "message": "Robot Süpürge [Mutfak] - Robot süpürge duraklatıldı",
+      "timestamp": "2026-10-13T13:45:06.370Z",
+      "isRead": true,
+      "id": 128
+    },
+    {
+      "userId": 2,
+      "message": "Akıllı Çamaşır Makinesi [Mutfak] - Yıkama duraklatıldı",
+      "timestamp": "2026-10-13T13:45:09.277Z",
+      "isRead": true,
+      "id": 129
+    },
+    {
+      "userId": 2,
+      "message": "Akıllı Çamaşır Makinesi [Mutfak] - Program seçildi: Hızlı",
+      "timestamp": "2026-10-13T13:45:11.050Z",
+      "isRead": true,
+      "id": 130
+    },
+    {
+      "userId": 2,
+      "message": "Akıllı Çamaşır Makinesi [Mutfak] - Program seçildi: Eco",
+      "timestamp": "2026-10-13T13:45:11.898Z",
+      "isRead": true,
+      "id": 131
+    },
+    {
+      "userId": 1,
+      "message": "Salon Aydınlatması [Salon] cihazı kapatıldı.",
+      "timestamp": "2026-10-14T14:08:37.728Z",
+      "isRead": false,
+      "id": 132
+    },
+    {
+      "userId": 1,
+      "message": "Salon Aydınlatması [Salon] cihazı açıldı.",
+      "timestamp": "2026-10-14T14:08:45.844Z",
+      "isRead": false,
+      "id": 133
+    },
+    {
+      "userId": 1,
+      "message": "Salon Aydınlatması [Salon] cihazı kapatıldı.",
+      "timestamp": "2026-10-14T14:08:48.182Z",
+      "isRead": false,
+      "id": 134
+    },
+    {
+      "userId": 1,
+      "message": "Salon Aydınlatması [Salon] cihazı açıldı.",
+      "timestamp": "2026-10-14T14:08:50.333Z",
+      "isRead": false,
+      "id": 135
+    },
+    {
+      "userId": 1,
+      "message": "Salon Aydınlatması [Salon] cihazı kapatıldı.",
+      "timestamp": "2026-10-14T14:08:51.504Z",
+      "isRead": false,
+      "id": 136
+    },
+    {
+      "userId": 1,
+      "message": "Salon Aydınlatması [Salon] cihazı açıldı.",
+      "timestamp": "2026-10-14T14:08:52.874Z",
+      "isRead": false,
+      "id": 137
+    },
+    {
+      "userId": 1,
+      "message": "Salon Aydınlatması [Salon] cihazı kapatıldı.",
+      "timestamp": "2026-10-14T14:08:56.559Z",
+      "isRead": false,
+      "id": 138
+    },
+    {
+      "userId": 1,
+      "message": "Salon Aydınlatması [Salon] cihazı açıldı.",
+      "timestamp": "2026-10-14T14:09:10.516Z",
+      "isRead": false,
+      "id": 139
+    },
+    {
+      "userId": 1,
+      "message": "Salon Aydınlatması [Salon] cihazı kapatıldı.",
+      "timestamp": "2026-10-14T14:09:11.840Z",
+      "isRead": false,
+      "id": 140
+    },
+    {
+      "userId": 1,
+      "message": "Salon Aydınlatması [Salon] cihazı açıldı.",
+      "timestamp": "2026-10-14T14:09:12.767Z",
+      "isRead": false,
+      "id": 141
+    },
+    {
+      "userId": 1,
+      "message": "Salon Aydınlatması [Salon] cihazı kapatıldı.",
+      "timestamp": "2026-10-14T14:09:13.617Z",
+      "isRead": false,
+      "id": 142
+    },
+    {
+      "userId": 1,
+      "message": "Salon Aydınlatması [Salon] cihazı açıldı.",
+      "timestamp": "2026-10-14T14:18:48.188Z",
+      "isRead": false,
+      "id": 143
+    },
+    {
+      "userId": 1,
+      "message": "Salon Aydınlatması [Salon] cihazı kapatıldı.",
+      "timestamp": "2026-10-14T14:18:51.001Z",
+      "isRead": false,
+      "id": 144
+    },
+    {
+      "userId": 1,
+      "message": "Mutfak Akıllı Priz [Mutfak] cihazı kapatıldı.",
+      "timestamp": "2026-10-14T14:19:00.219Z",
+      "isRead": false,
+      "id": 145
+    },
+    {
+      "userId": 1,
+      "message": "Balkon Güvenlik Kamerası [Balkon] cihazı kapatıldı.",
+      "timestamp": "2026-10-14T14:19:36.992Z",
+      "isRead": false,
+      "id": 146
+    },
+    {
+      "userId": 1,
+      "message": "Balkon Ambiyans Işığı [Balkon] cihazı kapatıldı.",
+      "timestamp": "2026-10-14T14:28:20.391Z",
+      "isRead": false,
+      "id": 147
+    },
+    {
+      "userId": 1,
+      "message": "Banyo Tavan Lambası [Banyo] cihazı kapatıldı.",
+      "timestamp": "2026-10-14T14:28:24.732Z",
+      "isRead": false,
+      "id": 148
+    },
+    {
+      "userId": 1,
+      "message": "Mutfak Aydınlatması [Mutfak] cihazı kapatıldı.",
+      "timestamp": "2026-10-14T14:28:27.841Z",
+      "isRead": false,
+      "id": 149
+    },
+    {
+      "userId": 1,
+      "message": "Salon Aydınlatması [Salon] cihazı açıldı.",
+      "timestamp": "2026-10-14T14:28:32.567Z",
+      "isRead": false,
+      "id": 150
+    },
+    {
+      "userId": 1,
+      "message": "Salon Aydınlatması [Salon] cihazı kapatıldı.",
+      "timestamp": "2026-10-14T14:28:33.733Z",
+      "isRead": false,
+      "id": 151
+    },
+    {
+      "userId": 1,
+      "message": "Balkon Güvenlik Kamerası [Balkon] cihazı açıldı.",
+      "timestamp": "2026-10-14T14:28:46.221Z",
+      "isRead": false,
+      "id": 152
+    },
+    {
+      "userId": 1,
+      "message": "Balkon Güvenlik Kamerası [Balkon] cihazı kapatıldı.",
+      "timestamp": "2026-10-17T10:00:18.294Z",
+      "isRead": false,
+      "id": 153
+    },
+    {
+      "userId": 1,
+      "message": "Balkon Isıtıcı Termostatı [Balkon] cihazı açıldı.",
+      "timestamp": "2026-10-17T10:00:20.338Z",
+      "isRead": false,
+      "id": 154
+    },
+    {
+      "userId": 1,
+      "message": "Balkon Akıllı Priz [Balkon] cihazı açıldı.",
+      "timestamp": "2026-10-17T10:00:21.892Z",
+      "isRead": false,
+      "id": 155
+    },
+    {
+      "userId": 1,
+      "message": "Balkon Ambiyans Işığı [Balkon] cihazı kapatıldı.",
+      "timestamp": "2026-10-17T10:33:12.191Z",
+      "isRead": false,
+      "id": 156
+    },
+    {
+      "userId": 1,
+      "message": "Balkon Akıllı Priz [Balkon] cihazı kapatıldı.",
+      "timestamp": "2026-10-17T10:33:21.639Z",
+      "isRead": false,
+      "id": 157
+    },
+    {
+      "userId": 1,
+      "message": "Otomatik Cam Balkon [Balkon] cihazı açıldı.",
+      "timestamp": "2026-10-17T10:33:24.928Z",
+      "isRead": false,
+      "id": 158
+    },
+    {
+      "userId": 1,
+      "message": "Otomatik Cam Balkon [Balkon] cihazı kapatıldı.",
+      "timestamp": "2026-10-17T10:33:30.959Z",
+      "isRead": false,
+      "id": 159
+    },
+    {
+      "userId": 1,
+      "message": "Balkon Isıtıcı Termostatı sıcaklığı 20°C yapıldı.",
+      "timestamp": "2026-10-17T10:33:32.555Z",
+      "isRead": false,
+      "id": 160
+    },
+    {
+      "userId": 1,
+      "message": "Balkon Isıtıcı Termostatı sıcaklığı 21°C yapıldı.",
+      "timestamp": "2026-10-17T10:33:32.823Z",
+      "isRead": false,
+      "id": 161
+    },
+    {
+      "userId": 1,
+      "message": "Balkon Isıtıcı Termostatı sıcaklığı 22°C yapıldı.",
+      "timestamp": "2026-10-17T10:33:33.211Z",
+      "isRead": false,
+      "id": 162
+    },
+    {
+      "userId": 1,
+      "message": "Balkon Isıtıcı Termostatı [Balkon] cihazı kapatıldı.",
+      "timestamp": "2026-10-17T10:33:46.841Z",
+      "isRead": false,
+      "id": 163
+    },
+    {
+      "userId": 1,
+      "message": "Robot Süpürge [Salon] cihazı açıldı.",
+      "timestamp": "2026-10-17T10:34:07.096Z",
+      "isRead": false,
+      "id": 164
+    },
+    {
+      "userId": 1,
+      "message": "Salon Güvenlik Kamerası [Salon] cihazı kapatıldı.",
+      "timestamp": "2026-10-17T10:34:08.780Z",
+      "isRead": false,
+      "id": 165
+    },
+    {
+      "userId": 1,
+      "message": "Salon TV & Ses Prizi [Salon] cihazı kapatıldı.",
+      "timestamp": "2026-10-17T10:34:11.386Z",
+      "isRead": false,
+      "id": 166
+    },
+    {
+      "userId": 1,
+      "message": "Salon Aydınlatması [Salon] cihazı açıldı.",
+      "timestamp": "2026-10-17T10:34:12.048Z",
+      "isRead": false,
+      "id": 167
+    },
+    {
+      "userId": 1,
+      "message": "Yeni otomasyon kuralı eklendi: Saat 13:36 -> Yatak Odası Lambası (turn_on)",
+      "timestamp": "2026-10-17T10:34:45.831Z",
+      "isRead": false,
+      "id": 168
+    },
+    {
+      "userId": 1,
+      "message": "Yatak Odası Lambası [Yatak Odası] cihazı açıldı.",
+      "timestamp": "2026-10-17T10:35:10.811Z",
+      "isRead": false,
+      "id": 169
+    },
+    {
+      "userId": 1,
+      "message": "Yatak Odası Lambası [Yatak Odası] cihazı kapatıldı.",
+      "timestamp": "2026-10-17T10:35:11.812Z",
+      "isRead": false,
+      "id": 170
+    },
+    {
+      "userId": 1,
+      "message": "Otomasyon kuralı çalıştı: Yatak Odası Lambası (Yatak Odası) Saat 13:36 kuralıyla AÇILDI.",
+      "timestamp": "2026-10-17T10:36:09.880Z",
+      "isRead": false,
+      "id": 171
+    },
+    {
+      "userId": 1,
+      "message": "Yatak Odası Kliması [Yatak Odası] cihazı açıldı.",
+      "timestamp": "2026-10-17T10:46:35.615Z",
+      "isRead": false,
+      "id": 172
+    },
+    {
+      "userId": 1,
+      "message": "Yatak Odası Kliması [Yatak Odası] cihazı kapatıldı.",
+      "timestamp": "2026-10-17T10:46:37.266Z",
+      "isRead": false,
+      "id": 173
+    },
+    {
+      "userId": 1,
+      "message": "Yatak Odası Lambası [Yatak Odası] cihazı kapatıldı.",
+      "timestamp": "2026-10-17T10:46:39.564Z",
+      "isRead": false,
+      "id": 174
+    },
+    {
+      "userId": 1,
+      "message": "Yatak Başı Akıllı Priz [Yatak Odası] cihazı açıldı.",
+      "timestamp": "2026-10-17T10:46:43.388Z",
+      "isRead": false,
+      "id": 175
+    },
+    {
+      "userId": 1,
+      "message": "Yatak Başı Akıllı Priz [Yatak Odası] cihazı kapatıldı.",
+      "timestamp": "2026-10-17T10:46:44.519Z",
+      "isRead": false,
+      "id": 176
+    },
+    {
+      "userId": 1,
+      "message": "Yatak Odası Güvenlik Kamerası [Yatak Odası] cihazı kapatıldı.",
+      "timestamp": "2026-10-17T10:46:50.302Z",
+      "isRead": false,
+      "id": 177
+    },
+    {
+      "userId": 1,
+      "message": "Salon Aydınlatması [Salon] cihazı kapatıldı.",
+      "timestamp": "2026-10-17T10:46:56.851Z",
+      "isRead": false,
+      "id": 178
+    },
+    {
+      "userId": 1,
+      "message": "Mutfak Aydınlatması [Mutfak] cihazı açıldı.",
+      "timestamp": "2026-10-17T10:47:01.978Z",
+      "isRead": false,
+      "id": 179
+    },
+    {
+      "userId": 1,
+      "message": "Mutfak Güvenlik Kamerası [Mutfak] cihazı kapatıldı.",
+      "timestamp": "2026-10-17T10:47:15.571Z",
+      "isRead": false,
+      "id": 180
+    },
+    {
+      "userId": 1,
+      "message": "Mutfak Aydınlatması [Mutfak] cihazı kapatıldı.",
+      "timestamp": "2026-10-17T10:47:16.705Z",
+      "isRead": false,
+      "id": 181
+    },
+    {
+      "userId": 1,
+      "message": "Salon Aydınlatması [Salon] cihazı açıldı.",
+      "timestamp": "2026-10-20T10:18:05.982Z",
+      "isRead": false,
+      "id": 182
+    },
+    {
+      "userId": 1,
+      "message": "Salon Güvenlik Kamerası [Salon] cihazı açıldı.",
+      "timestamp": "2026-10-20T10:18:09.732Z",
+      "isRead": false,
+      "id": 183
+    },
+    {
+      "userId": 1,
+      "message": "Salon Kliması & Termostat [Salon] cihazı açıldı.",
+      "timestamp": "2026-10-20T10:18:12.444Z",
+      "isRead": false,
+      "id": 184
+    },
+    {
+      "userId": 1,
+      "message": "Salon Kliması & Termostat [Salon] cihazı kapatıldı.",
+      "timestamp": "2026-10-20T10:18:14.993Z",
+      "isRead": false,
+      "id": 185
+    },
+    {
+      "userId": 1,
+      "message": "Robot Süpürge [Salon] - Temizlik başlatıldı",
+      "timestamp": "2026-10-20T10:18:18.271Z",
+      "isRead": false,
+      "id": 186
+    },
+    {
+      "userId": 1,
+      "message": "Robot Süpürge [Salon] - Şarj istasyonuna döndü",
+      "timestamp": "2026-10-20T10:18:19.847Z",
+      "isRead": false,
+      "id": 187
+    },
+    {
+      "userId": 1,
+      "message": "Robot Süpürge [Salon] cihazı açıldı.",
+      "timestamp": "2026-10-20T10:18:21.499Z",
+      "isRead": false,
+      "id": 188
+    },
+    {
+      "userId": 1,
+      "message": "Robot Süpürge [Salon] cihazı kapatıldı.",
+      "timestamp": "2026-10-20T10:18:22.129Z",
+      "isRead": false,
+      "id": 189
+    },
+    {
+      "userId": 1,
+      "message": "Akıllı Çamaşır Makinesi [Mutfak] - Program seçildi: Pamuklu",
+      "timestamp": "2026-10-20T10:18:33.613Z",
+      "isRead": false,
+      "id": 190
+    },
+    {
+      "userId": 1,
+      "message": "Akıllı Çamaşır Makinesi [Mutfak] - Pamuklu programı başlatıldı",
+      "timestamp": "2026-10-20T10:18:34.654Z",
+      "isRead": false,
+      "id": 191
+    },
+    {
+      "userId": 1,
+      "message": "Akıllı Çamaşır Makinesi [Mutfak] cihazı kapatıldı.",
+      "timestamp": "2026-10-20T10:18:36.299Z",
+      "isRead": false,
+      "id": 192
+    },
+    {
+      "userId": 1,
+      "message": "Otomatik Cam Balkon [Balkon] cihazı kapatıldı.",
+      "timestamp": "2026-10-20T10:18:48.695Z",
+      "isRead": false,
+      "id": 193
+    },
+    {
+      "userId": 1,
+      "message": "Otomatik Cam Balkon [Balkon] cihazı açıldı.",
+      "timestamp": "2026-10-20T10:18:50.536Z",
+      "isRead": false,
+      "id": 194
+    },
+    {
+      "userId": 1,
+      "message": "Otomatik Cam Balkon [Balkon] cihazı kapatıldı.",
+      "timestamp": "2026-10-20T10:18:51.998Z",
+      "isRead": false,
+      "id": 195
+    },
+    {
+      "userId": 1,
+      "message": "Balkon Ambiyans Işığı [Balkon] cihazı kapatıldı.",
+      "timestamp": "2026-10-20T10:18:52.998Z",
+      "isRead": false,
+      "id": 196
+    },
+    {
+      "userId": 1,
+      "message": "Salon Aydınlatması [Salon] cihazı kapatıldı.",
+      "timestamp": "2026-10-20T10:18:59.833Z",
+      "isRead": false,
+      "id": 197
+    },
+    {
+      "userId": 1,
+      "message": "Salon Güvenlik Kamerası [Salon] cihazı kapatıldı.",
+      "timestamp": "2026-10-20T10:19:00.570Z",
+      "isRead": false,
+      "id": 198
+    }
+  ]
+}

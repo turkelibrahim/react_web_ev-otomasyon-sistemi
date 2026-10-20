@@ -1,0 +1,300 @@
+/* ==========================================================================
+   AuraHome - İnteraktif 2D / 3D Kat Planı (FloorPlan.css)
+   Saf (Vanilla) CSS 3D Transforms & Glassmorphism Tasarımı
+   ========================================================================== */
+
+/* Ana Kapsayıcı */
+.floorplan-wrapper {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  background: #0a1120;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 200, 255, 0.15);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  color: #f1f5f9;
+}
+
+/* Üst Kontrol & Başlık Alanı */
+.floorplan-topbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.floorplan-title-box h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.floorplan-title-box p {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+/* 2D / 3D Toggle Butonları */
+.floorplan-toggle-group {
+  display: inline-flex;
+  background: rgba(16, 25, 40, 0.85);
+  border: 1px solid rgba(0, 200, 255, 0.2);
+  border-radius: 12px;
+  padding: 4px;
+  backdrop-filter: blur(8px);
+}
+
+.toggle-btn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+
+.toggle-btn:hover {
+  color: #ffffff;
+}
+
+.toggle-btn.active {
+  background: linear-gradient(135deg, #00c8ff 0%, #0077ff 100%);
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 200, 255, 0.45);
+}
+
+/* 3D Perspektif Sahnesi (Viewport) */
+.floorplan-viewport {
+  width: 100%;
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1200px;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+/* Evin Ana Grid Planı */
+.floorplan-house-grid {
+  width: 100%;
+  max-width: 580px;
+  aspect-ratio: 1.1 / 1;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  grid-template-rows: 1.2fr 1fr;
+  gap: 16px;
+  transform-style: preserve-3d;
+  transition: transform 0.65s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* 3D İzometrik Açı */
+.floorplan-house-grid.mode-3d {
+  transform: rotateX(60deg) rotateZ(-45deg);
+}
+
+/* 2D Mimari Düzlem */
+.floorplan-house-grid.mode-2d {
+  transform: rotateX(0deg) rotateZ(0deg);
+}
+
+/* ==========================================================================
+   Oda Kartları (Glassmorphism & 3D Hover Lift)
+   ========================================================================== */
+.room-card {
+  position: relative;
+  background: rgba(16, 25, 40, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 200, 255, 0.25);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  transform-style: preserve-3d;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Mimari Zemin Çizgileri Deseni */
+.room-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(0, 200, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 200, 255, 0.04) 1px, transparent 1px);
+  background-size: 16px 16px;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* Odaların Izgara Konumları */
+.room-salon {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.room-mutfak {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.room-yatak {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.room-banyo {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+/* 3D Modundayken Hover ile Havaya Kalkma Efekti (Lift) */
+.floorplan-house-grid.mode-3d .room-card:hover {
+  transform: translateZ(30px);
+  border-color: #00c8ff;
+  box-shadow: 
+    0 25px 40px rgba(0, 0, 0, 0.7),
+    0 0 25px rgba(0, 200, 255, 0.35);
+}
+
+/* 2D Modundayken İnce Hover Efekti */
+.floorplan-house-grid.mode-2d .room-card:hover {
+  transform: translateY(-4px);
+  border-color: #00c8ff;
+  box-shadow: 0 12px 30px rgba(0, 200, 255, 0.2);
+}
+
+/* Oda Başlık Alanı */
+.room-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.room-name-text {
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  color: #ffffff;
+}
+
+/* Aktif Cihaz Neon Gösterge Noktası (Pulsing Dot) */
+.room-status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pulse-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #00ff88;
+  box-shadow: 0 0 12px #00ff88, 0 0 20px rgba(0, 255, 136, 0.6);
+  animation: neonPulse 1.8s infinite ease-in-out;
+}
+
+.pulse-dot.inactive {
+  background: #64748b;
+  box-shadow: none;
+  animation: none;
+}
+
+/* Oda Alt Bilgi Alanı (Cihaz Sayısı) */
+.room-card-footer {
+  z-index: 1;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.device-status-badge {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #94a3b8;
+  transition: color 0.3s ease;
+}
+
+.room-card:hover .device-status-badge {
+  color: #00c8ff;
+}
+
+/* ==========================================================================
+   Animasyonlar (Keyframes)
+   ========================================================================== */
+@keyframes neonPulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.75;
+    box-shadow: 0 0 8px #00ff88;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+    box-shadow: 0 0 16px #00ff88, 0 0 25px rgba(0, 255, 136, 0.8);
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0.75;
+    box-shadow: 0 0 8px #00ff88;
+  }
+}
+
+/* ==========================================================================
+   Mobil Cihaz Uyumluluğu (Responsive)
+   ========================================================================== */
+@media (max-width: 640px) {
+  .floorplan-wrapper {
+    padding: 20px 14px;
+  }
+
+  .floorplan-viewport {
+    min-height: 360px;
+    padding: 20px 0;
+  }
+
+  .floorplan-house-grid {
+    gap: 12px;
+  }
+
+  .floorplan-house-grid.mode-3d {
+    transform: rotateX(50deg) rotateZ(-35deg);
+  }
+
+  .room-card {
+    padding: 14px;
+  }
+
+  .room-name-text {
+    font-size: 0.95rem;
+  }
+
+  .device-status-badge {
+    font-size: 0.72rem;
+  }
+}

@@ -1,0 +1,834 @@
+/* ==========================================================================
+   AuraHome - Canlı CCTV Güvenlik Monitörü & Kayıt Merkezi (CCTVModal.css)
+   ========================================================================== */
+
+.cctv-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 8, 16, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: cctvFadeIn 0.3s ease;
+}
+
+.cctv-modal-container {
+  width: 100%;
+  max-width: 1240px;
+  max-height: 90vh;
+  background: #090e1a;
+  border: 1px solid rgba(0, 200, 255, 0.3);
+  border-radius: 24px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 200, 255, 0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #f1f5f9;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* Üst Başlık */
+.cctv-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 28px;
+  background: rgba(13, 20, 36, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cctv-header-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.cctv-title-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #ef4444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 16px rgba(239, 68, 68, 0.25);
+}
+
+.cctv-header-title h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin: 0;
+  color: #ffffff;
+}
+
+.cctv-header-title p {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  margin: 2px 0 0 0;
+}
+
+.cctv-close-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #94a3b8;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cctv-close-btn:hover {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+  border-color: #ef4444;
+}
+
+/* Kamera Sekmeleri */
+.cctv-camera-tabs {
+  display: flex;
+  gap: 10px;
+  padding: 12px 28px;
+  background: rgba(8, 13, 24, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  overflow-x: auto;
+}
+
+.cctv-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #94a3b8;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.cctv-tab-btn:hover {
+  background: rgba(0, 200, 255, 0.12);
+  color: #ffffff;
+  border-color: rgba(0, 200, 255, 0.3);
+}
+
+.cctv-tab-btn.active {
+  background: rgba(0, 200, 255, 0.2);
+  color: #00c8ff;
+  border-color: #00c8ff;
+  box-shadow: 0 0 14px rgba(0, 200, 255, 0.25);
+}
+
+.cctv-tab-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #64748b;
+}
+
+.cctv-tab-dot.rec-pulse {
+  background: #ef4444;
+  box-shadow: 0 0 8px #ef4444;
+  animation: cctvPulse 1.2s infinite;
+}
+
+.cctv-tab-tag {
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Ana İçerik */
+.cctv-main-content {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  flex: 1;
+  overflow: hidden;
+  min-height: 480px;
+}
+
+/* Sol Monitör */
+.cctv-monitor-column {
+  display: flex;
+  flex-direction: column;
+  background: #050811;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cctv-screen-viewport {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  min-height: 380px;
+  background: #000;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cctv-feed-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Gece Görüşü IR Filtresi */
+.cctv-screen-viewport.night-vision .cctv-feed-image {
+  filter: grayscale(100%) contrast(1.3) brightness(1.15) sepia(20%) hue-rotate(85deg);
+}
+
+/* CCTV HUD Overlay */
+.cctv-hud-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.12) 0px, rgba(0, 0, 0, 0.12) 1px, transparent 1px, transparent 4px);
+  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.65);
+}
+
+/* 4 Köşe Nişangâh Çerçevesi */
+.cctv-corner {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-color: rgba(0, 200, 255, 0.6);
+  pointer-events: none;
+}
+
+.cctv-corner.top-left {
+  top: 16px;
+  left: 16px;
+  border-top: 3px solid #00c8ff;
+  border-left: 3px solid #00c8ff;
+}
+
+.cctv-corner.top-right {
+  top: 16px;
+  right: 16px;
+  border-top: 3px solid #00c8ff;
+  border-right: 3px solid #00c8ff;
+}
+
+.cctv-corner.bottom-left {
+  bottom: 16px;
+  left: 16px;
+  border-bottom: 3px solid #00c8ff;
+  border-left: 3px solid #00c8ff;
+}
+
+.cctv-corner.bottom-right {
+  bottom: 16px;
+  right: 16px;
+  border-bottom: 3px solid #00c8ff;
+  border-right: 3px solid #00c8ff;
+}
+
+/* Üst Bar */
+.cctv-hud-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.cctv-rec-indicator {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cctv-rec-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.cctv-rec-pill.live {
+  background: rgba(220, 38, 38, 0.9);
+  color: #ffffff;
+  box-shadow: 0 0 16px rgba(220, 38, 38, 0.5);
+}
+
+.cctv-rec-pill.paused {
+  background: rgba(100, 116, 139, 0.8);
+  color: #ffffff;
+}
+
+.cctv-rec-blink {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ffffff;
+  animation: cctvBlink 1s infinite;
+}
+
+.cctv-live-clock {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  color: #00ff88;
+  text-shadow: 0 0 8px rgba(0, 255, 136, 0.6);
+  font-weight: 700;
+}
+
+.cctv-telemetry-pill {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.74rem;
+  padding: 4px 10px;
+  background: rgba(0, 0, 0, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  color: #e2e8f0;
+}
+
+.telemetry-sep {
+  margin: 0 6px;
+  color: #64748b;
+}
+
+/* Merkez Hedefleme */
+.cctv-center-crosshair {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cctv-reticle-box {
+  border: 1px dashed rgba(0, 200, 255, 0.4);
+  padding: 18px 32px;
+  border-radius: 8px;
+  background: rgba(0, 200, 255, 0.05);
+}
+
+.reticle-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: #38bdf8;
+  letter-spacing: 1px;
+}
+
+/* Alt Bar */
+.cctv-hud-bottom-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cctv-storage-pill {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: #cbd5e1;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.cctv-mode-tags {
+  display: flex;
+  gap: 8px;
+}
+
+.cctv-ir-tag, .cctv-audio-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.cctv-ir-tag {
+  background: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+.cctv-audio-tag {
+  background: rgba(0, 200, 255, 0.2);
+  color: #00c8ff;
+  border: 1px solid rgba(0, 200, 255, 0.4);
+}
+
+/* Oynatma Katmanı */
+.cctv-playback-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(10, 16, 30, 0.92);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 200, 255, 0.4);
+  border-radius: 12px;
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+}
+
+.playback-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.playback-title {
+  color: #00ff88;
+}
+
+.playback-bar-track {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.playback-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #00c8ff, #00ff88);
+  transition: width 0.4s ease;
+}
+
+.playback-stop-btn {
+  align-self: flex-end;
+  padding: 4px 12px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 0.76rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Kontrol Butonları Çubuğu */
+.cctv-controls-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  background: rgba(10, 15, 28, 0.95);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  flex-wrap: wrap;
+}
+
+.cctv-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.cctv-action-btn.start-rec {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+  border-color: rgba(239, 68, 68, 0.35);
+}
+
+.cctv-action-btn.start-rec:hover {
+  background: #ef4444;
+  color: #ffffff;
+  box-shadow: 0 0 16px rgba(239, 68, 68, 0.5);
+}
+
+.cctv-action-btn.stop-rec {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border-color: rgba(245, 158, 11, 0.35);
+}
+
+.cctv-action-btn.stop-rec:hover {
+  background: #fbbf24;
+  color: #000;
+}
+
+.cctv-action-btn.neutral {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #e2e8f0;
+}
+
+.cctv-action-btn.neutral:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+.cctv-action-btn.neutral.active {
+  background: rgba(0, 200, 255, 0.2);
+  color: #00c8ff;
+  border-color: #00c8ff;
+}
+
+.cctv-action-btn.danger {
+  background: rgba(239, 68, 68, 0.12);
+  color: #ef4444;
+  border-color: rgba(239, 68, 68, 0.25);
+  margin-left: auto;
+}
+
+.cctv-action-btn.danger:hover {
+  background: rgba(239, 68, 68, 0.3);
+}
+
+/* Sağ Kolon (Arşiv) */
+.cctv-archive-column {
+  display: flex;
+  flex-direction: column;
+  background: rgba(13, 19, 34, 0.95);
+  overflow: hidden;
+}
+
+.cctv-archive-header {
+  padding: 18px 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cctv-archive-header h4 {
+  font-size: 0.98rem;
+  font-weight: 800;
+  margin: 0 0 10px 0;
+  color: #ffffff;
+}
+
+.cctv-archive-tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.archive-tab-btn {
+  padding: 6px 14px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #94a3b8;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.archive-tab-btn.active {
+  background: rgba(0, 200, 255, 0.2);
+  color: #00c8ff;
+  border-color: rgba(0, 200, 255, 0.4);
+}
+
+/* Klipler Listesi */
+.cctv-clips-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cctv-clip-card {
+  background: rgba(20, 28, 48, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.cctv-clip-card:hover {
+  background: rgba(25, 36, 62, 0.8);
+  border-color: rgba(0, 200, 255, 0.3);
+}
+
+.cctv-clip-card.now-playing {
+  border-color: #00ff88;
+  background: rgba(0, 255, 136, 0.08);
+}
+
+.clip-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.clip-badge {
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+}
+
+.clip-badge.motion {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.35);
+}
+
+.clip-badge.person {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.35);
+}
+
+.clip-badge.loop, .clip-badge.night {
+  background: rgba(0, 200, 255, 0.2);
+  color: #38bdf8;
+  border: 1px solid rgba(0, 200, 255, 0.35);
+}
+
+.clip-room-tag {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.clip-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  margin: 0;
+  color: #f1f5f9;
+}
+
+.clip-meta {
+  display: flex;
+  gap: 12px;
+  font-size: 0.72rem;
+  color: #94a3b8;
+  font-family: 'JetBrains Mono', monospace;
+  margin-top: 4px;
+}
+
+.clip-card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.clip-btn {
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s ease;
+}
+
+.clip-btn.play {
+  background: rgba(0, 200, 255, 0.15);
+  color: #00c8ff;
+  border-color: rgba(0, 200, 255, 0.35);
+}
+
+.clip-btn.play:hover {
+  background: #00c8ff;
+  color: #000;
+}
+
+.clip-btn.neutral {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #cbd5e1;
+}
+
+.clip-btn.neutral:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.clip-btn.delete {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  margin-left: auto;
+}
+
+.clip-btn.delete:hover {
+  background: rgba(239, 68, 68, 0.25);
+}
+
+/* Anlık Fotoğraflar */
+.cctv-snapshots-grid {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cctv-snap-card {
+  background: rgba(20, 28, 48, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  gap: 12px;
+  padding: 10px;
+}
+
+.snap-preview-box {
+  width: 110px;
+  height: 70px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.snap-preview-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.snap-time-tag {
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 0.62rem;
+  padding: 1px 4px;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.snap-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.snap-info h6 {
+  font-size: 0.84rem;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+}
+
+.snap-info span {
+  font-size: 0.72rem;
+  color: #94a3b8;
+}
+
+.snap-download-btn {
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: rgba(0, 200, 255, 0.15);
+  color: #00c8ff;
+  border: 1px solid rgba(0, 200, 255, 0.3);
+  cursor: pointer;
+}
+
+/* Alt Depolama */
+.cctv-storage-footer {
+  padding: 16px 22px;
+  background: rgba(10, 15, 28, 0.95);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.storage-summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.storage-val {
+  color: #00c8ff;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.storage-progress-bar {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.storage-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #00c8ff, #0077ff);
+}
+
+.storage-extra-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: #94a3b8;
+}
+
+/* Animasyonlar */
+@keyframes cctvFadeIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes cctvBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+@keyframes cctvPulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+  70% { transform: scale(1.15); box-shadow: 0 0 0 8px rgba(239, 68, 68, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+/* Mobil */
+@media (max-width: 900px) {
+  .cctv-main-content {
+    grid-template-columns: 1fr;
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+  .cctv-screen-viewport {
+    min-height: 260px;
+  }
+}
