@@ -76,8 +76,8 @@ Ensure you have [Node.js](https://nodejs.org/) installed (v18+ recommended).
 ### 2. Installation
 Clone the repository and install dependencies:
 ```bash
-git clone https://github.com/your-username/smart-home-dashboard.git
-cd smart-home-dashboard
+git clone https://github.com/turkelibrahim/react_web_ev-otomasyon-sistemi.git
+cd react_web_ev-otomasyon-sistemi
 npm install
 ```
 
@@ -185,8 +185,8 @@ Bilgisayarınızda [Node.js](https://nodejs.org/) kurulu olmalıdır (v18 veya �
 
 ### 2. Projeyi Klonlayın ve Bağımlılıkları Yükleyin:
 ```bash
-git clone https://github.com/kullanici-adiniz/smart-home-dashboard.git
-cd smart-home-dashboard
+git clone https://github.com/turkelibrahim/react_web_ev-otomasyon-sistemi.git
+cd react_web_ev-otomasyon-sistemi
 npm install
 ```
 
