@@ -41,8 +41,8 @@
       "id": 3
     },
     {
-      "username": "Bejan",
-      "password": "bejan123",
+      "username": "demo_user",
+      "password": "demo123",
       "role": "user",
       "rooms": [
         "Salon",
@@ -730,7 +730,7 @@
     },
     {
       "userId": 4,
-      "message": "Yeni kullanıcı hesabı oluşturuldu: Bejan",
+      "message": "Yeni kullanıcı hesabı oluşturuldu: demo_user",
       "timestamp": "2026-10-13T11:09:02.053Z",
       "isRead": true,
       "id": 39
