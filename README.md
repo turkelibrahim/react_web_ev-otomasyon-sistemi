@@ -17,6 +17,12 @@ cd ../client
 npm install
 ```
 
+## Database setup
+
+From the `server` directory, run `npm run db:init` to create the local SQLite database and schema, then `npm run db:seed` to add the four device types. Both commands can be repeated; seeding does not duplicate types. The server also initializes the schema on startup. Data is stored locally in `server/data/home-automation.sqlite` and is ignored by Git. The SQLite driver uses a native Node.js addon; installation may require a compatible prebuilt binary or build tools.
+
+See [shared contracts](docs/contracts.md) for the planned data and API conventions.
+
 ## Development
 
 In separate terminals, run:

@@ -1,4 +1,12 @@
 const express = require('express');
+const { openDatabase, initializeDatabase } = require('./db/database');
+
+const db = openDatabase();
+try {
+  initializeDatabase(db);
+} finally {
+  db.close();
+}
 
 const app = express();
 app.use(express.json());
